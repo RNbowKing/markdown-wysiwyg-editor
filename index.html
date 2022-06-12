@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éditeur Markdown</title>
+    <link href="/favicon.png" rel="icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link href="/assets/stylesheets/fonts.css" rel="stylesheet" />
+    <link href="/assets/stylesheets/layout.css" rel="stylesheet" />
+    <link href="/assets/stylesheets/colors.css" rel="stylesheet" />
+    <meta name="description" content="Un éditeur WYSIWYG pour Markdown">
+    <meta name="keywords" content="Markdown, WYSIWYG, editor">
+    <meta name="author" content="Quentin Pugeat">
+    <meta name="twitter:creator" content="@MjstcQueentin"/>
+    <meta property="og:title" content="Éditeur Markdown" />
+    <meta property="og:description" content="Un éditeur WYSIWYG pour Markdown">
+    <meta property="og:url" content="https://markdowneditor.quentinpugeat.fr/" />
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta property="og:image" content="https://markdowneditor.quentinpugeat.fr/assets/images/opengraph.png" />
+    <meta property="og:locale" content="fr_FR" />
+</head>
+<body>
+    <header>
+        <div>
+            <i class="bi bi-markdown"></i>
+            <h1>Éditeur Markdown</h1>
+        </div>
+        <div>
+            <button id="spellcheckbtn" title="Activer/Désactiver la vérification orthographique" onclick="toggleSpellcheck()"><i class="bi bi-spellcheck"></i></button>
+            <button id="savebtn" title="Sauvegarder en local" onclick="saveFile()" disabled><i class="bi bi-download"></i></button>
+        </div>
+    </header>
+    <section>
+        <div class="editor">
+            <textarea spellcheck="true" autofocus id="editorarea"></textarea>
+        </div>
+        <div class="render">
+            <div class="hidden message"><i class="bi bi-info-circle"></i> <span id="messagearea"></span></div>
+            <div id="renderarea"></div>
+            <div class="hidden" id="renderloading"><i class="bi bi-hourglass"></i></div>
+        </div>
+
+
+        
+    </section>
+    <footer>
+        <span>(c) 2022 <a href="https://www.quentinpugeat.fr/">Quentin Pugeat</a></span>
+        - <a href="#">Code source</a>
+        - <a href="#">Mentions légales</a>
+    </footer>
+    <script src="/assets/scripts/editor.js"></script>
+</body>
+</html>

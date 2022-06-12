@@ -1,0 +1,28 @@
+header, footer {
+    background-color: rgb(232, 232, 255);
+}
+
+header h1 {
+    margin: 0;
+}
+
+#renderarea, #renderloading {
+    background-color: rgb(250, 250, 250);
+}
+
+@media (prefers-color-scheme: dark) {
+    header, footer {
+        background-color: rgb(0, 0, 80);
+        color: white;
+    }
+
+    textarea {
+        background-color: black;
+        color: white;
+    }
+
+    #renderarea, #renderloading {
+        background-color: rgb(50, 50, 50);
+        color: white;
+    }
+}
